@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 public class Application extends Controller {
 
   public Result index() {
-    return ok(index.render("Hello Play Framework"));
+    return ok(index.render("Hello Play JS"));
   }
 
   public Result syncFoo() {
