@@ -1,5 +1,11 @@
+# Abstract
+A java [Play](https://www.playframework.com/) 2.4.2 template with JsFrameworks.
+
+## Usage
+`activator new PROJECTNAME play-js-active`
+
 ## Introduction
-A starting template if you want to develop a micro service with hibernate/jpa.
+A starting template if you want to develop a micro service with javascript frameworks.
 
 Then, we have the following objectives:
 
