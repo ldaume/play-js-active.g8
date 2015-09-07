@@ -1,5 +1,5 @@
 # Abstract
-A java [Play](https://www.playframework.com/) 2.4.2 template with JsFrameworks.
+A java [Play](https://www.playframework.com/) 2.4.3 template with JsFrameworks.
 
 ## Usage
 `activator new PROJECTNAME play-js-active`
