@@ -21,7 +21,8 @@ libraryDependencies ++= Seq(
   "org.webjars" % "backbonejs" % "1.2.1",
   "org.webjars" % "angularjs" % "2.0.0-alpha.22",
   //"org.webjars" % "underscorejs" % "1.8.1",
-  "org.webjars" % "react" % "0.13.3",
+  "org.webjars" % "react" % "0.13.3",,
+  "com.jayway.jsonpath" % "json-path" % "2.0.0"
   // Testing
   "org.assertj" % "assertj-core" % "3.1.0" % "test",
   "org.apache.commons" % "commons-lang3" % "3.4"
@@ -44,3 +45,21 @@ initialize := {
   if (sys.props("java.specification.version") != "1.8")
     sys.error("Java 8 is required for this project.")
 }
+
+
+// --------------------
+// ------ DOCKER ------
+// --------------------
+// build with activator:publishLocal
+
+// setting a maintainer which is used for all packaging types</pre>
+maintainer := "Me"
+
+// exposing the play ports
+dockerExposedPorts in Docker := Seq(9000, 9443)
+
+// publish to repo
+//dockerRepository := Some("quay.io/")
+//dockerUpdateLatest := true
+
+// run this with: docker run -p 9000:9000 <name>:<version>
