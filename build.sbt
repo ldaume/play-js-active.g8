@@ -22,7 +22,6 @@ libraryDependencies ++= Seq(
   "org.webjars" % "angularjs" % "2.0.0-alpha.22",
   //"org.webjars" % "underscorejs" % "1.8.1",
   "org.webjars" % "react" % "0.13.3",
-  "com.jayway.jsonpath" % "json-path" % "2.0.0",
   
   // Commons
   "org.apache.commons" % "commons-lang3" % "3.4",
