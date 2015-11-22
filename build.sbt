@@ -21,11 +21,17 @@ libraryDependencies ++= Seq(
   "org.webjars" % "backbonejs" % "1.2.1",
   "org.webjars" % "angularjs" % "2.0.0-alpha.22",
   //"org.webjars" % "underscorejs" % "1.8.1",
-  "org.webjars" % "react" % "0.13.3",,
-  "com.jayway.jsonpath" % "json-path" % "2.0.0"
+  "org.webjars" % "react" % "0.13.3",
+  "com.jayway.jsonpath" % "json-path" % "2.0.0",
+  
+  // Commons
+  "org.apache.commons" % "commons-lang3" % "3.4",
+  "com.google.guava" % "guava" % "19.0-rc2",
+  "org.apache.commons" % "commons-collections4" % "4.0",
+  "commons-io" % "commons-io" % "2.4",
+  
   // Testing
-  "org.assertj" % "assertj-core" % "3.1.0" % "test",
-  "org.apache.commons" % "commons-lang3" % "3.4"
+  "org.assertj" % "assertj-core" % "3.1.0" % "test"
   // Select Play modules
   //anorm,     // Scala RDBMS Library
   //javaJpa,   // Java JPA plugin
