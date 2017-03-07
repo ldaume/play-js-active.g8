@@ -4,7 +4,7 @@ name := "play-js-active"
 
 version := "0.0.1-SNAPSHOT"
 
-lazy val `play-js-active` = (project in file(".")).enablePlugins(PlayJava, JavaAppPackaging, DockerPlugin)
+lazy val root = (project in file(".")).enablePlugins(PlayJava, JavaAppPackaging, DockerPlugin)
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
