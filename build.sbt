@@ -8,7 +8,7 @@ lazy val `play-js-active` = (project in file(".")).enablePlugins(PlayJava, JavaA
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.1"
 
 resolvers += Resolver.mavenLocal
 
