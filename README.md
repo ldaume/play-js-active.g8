@@ -1,5 +1,5 @@
 # Abstract
-A java [Play](https://www.playframework.com/) 2.4.6 template with JsFrameworks.
+A java [Play](https://www.playframework.com/) 2.6.0-M1 template with JsFrameworks.
 
 ## Usage
 `activator new PROJECTNAME play-js-active`
@@ -22,10 +22,6 @@ Then, we have the following objectives:
     * How to share every common code to avoid duplications (models, controllers, views, CoffeeScript, LESS, ...). 
     * How to use it for development, test and production.
 
-## Binding
-This template uses the dependency injected router [Dependency Injection](https://www.playframework.com/documentation/2.4.x/JavaRouting)
-## Dependency-Injection 
-So, every route starts with an @ like `@controllers.Application.index()` which leads to non-static actions.
 
 ## Logging
 
