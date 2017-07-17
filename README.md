@@ -2,7 +2,7 @@
 A java [Play](https://www.playframework.com/) 2.6.0-M1 [Giter8](http://www.foundweekends.org/giter8/) template with JsFrameworks.
 
 ## Usage
-`sbt new ldaume/play-js-active.g8 --name=play-js-active`
+`sbt new ldaume/play-js-active.g8`
 
 ## Introduction
 A starting template if you want to develop a micro service with javascript frameworks.

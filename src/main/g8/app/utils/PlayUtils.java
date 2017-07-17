@@ -55,7 +55,7 @@ public final class PlayUtils {
                                              .toString());
     loadedConfigFile.keySet().stream().sorted().forEach(key -> {
       try {
-        addKeyValue(configPrinter, key, ctx.read("$." + key));
+        addKeyValue(configPrinter, key, ctx.read("\$." + key));
       } catch (Exception e) {
         addKeyValue(configPrinter, key, " = n/a");
       }

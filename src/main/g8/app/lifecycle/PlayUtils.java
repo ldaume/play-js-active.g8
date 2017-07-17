@@ -65,7 +65,7 @@ public final class PlayUtils {
         DocumentContext ctx = JsonPath.parse(Json.toJson(application.configuration().asMap()).toString());
         loadedConfigFile.keySet().stream().sorted().forEach(key -> {
             try {
-                addKeyValue(configPrinter, key, ctx.read(join("$.", key)));
+                addKeyValue(configPrinter, key, ctx.read(join("\$.", key)));
             } catch (Exception e) {
                 addKeyValue(configPrinter, key, " = n/a");
             }
