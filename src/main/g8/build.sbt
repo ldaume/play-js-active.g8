@@ -1,8 +1,8 @@
 import com.typesafe.sbt.packager.docker._
 
-name := "play-js-active"
+name := "$name$"
 
-version := "0.0.1-SNAPSHOT"
+version := "$version$"
 
 lazy val root = (project in file(".")).enablePlugins(PlayJava, JavaAppPackaging, DockerPlugin)
 
