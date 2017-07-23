@@ -6,7 +6,7 @@ Play JS Active
 =================
 
 # Abstract
-A java [Play](https://www.playframework.com/) 2.6.0-M1 [Giter8](http://www.foundweekends.org/giter8/) template with JsFrameworks.
+A java [Play](https://www.playframework.com/) 2.6.2 [Giter8](http://www.foundweekends.org/giter8/) template with JsFrameworks.
 
 ## Usage
 `sbt new ldaume/play-js-active.g8`
@@ -26,7 +26,7 @@ Then, we have the following objectives:
     * [Assets with AngularJS, Bootstrap, RequireJS, Backbone.js, React](http://www.playframework.com/documentation/2.4.x/Assets).
       * More could be: [Digest](http://www.coding-stories.com/digest-js/) or [Fingerprintjs2](https://github.com/Valve/fingerprintjs2)
   * It shoud explain:
-    * How to share every common code to avoid duplications (models, controllers, views, CoffeeScript, LESS, ...).
+    * How to share every common code to avoid duplications (models, controllers, views, Javascript, LESS, ...).
     * How to use it for development, test and production.
 
 
