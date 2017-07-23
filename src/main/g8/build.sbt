@@ -21,25 +21,22 @@ libraryDependencies ++= Seq(
   javaWs,
   // WebJars pull in client-side web libraries,
   "org.webjars" % "bootstrap" % "3.3.7",
-  "org.webjars" %% "webjars-play" % "2.6.0-M1",
-  "org.webjars" % "jquery" % "3.1.1",
-  "org.webjars" % "requirejs" % "2.3.2",
-  "org.webjars" % "backbonejs" % "1.3.2",
+  "org.webjars" %% "webjars-play" % "2.6.1",
+  "org.webjars" % "jquery" % "3.2.1",
+  "org.webjars" % "requirejs" % "2.3.3",
+  "org.webjars" % "backbonejs" % "1.3.3",
   "org.webjars" % "angularjs" % "2.0.0-alpha.22",
   //"org.webjars" % "underscorejs" % "1.8.1",
-  "org.webjars" % "react" % "15.3.2",
+  "org.webjars" % "react" % "15.6.1",
 
   // Commons
-  "org.apache.commons" % "commons-lang3" % "3.5",
-  "com.google.guava" % "guava" % "21.0",
-  "org.apache.commons" % "commons-collections4" % "4.1",
-  "commons-io" % "commons-io" % "2.5",
+  "software.reinvent" % "commons" % "0.3.3",
 
   // Json
-  "com.jayway.jsonpath" % "json-path" % "2.2.0",
+  "com.jayway.jsonpath" % "json-path" % "2.4.0",
 
   // Testing
-  "org.assertj" % "assertj-core" % "3.6.2" % "test"
+  "org.assertj" % "assertj-core" % "3.8.0" % "test"
   // Select Play modules
   //anorm,     // Scala RDBMS Library
   //javaJpa,   // Java JPA plugin
