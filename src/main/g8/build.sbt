@@ -91,7 +91,7 @@ dockerCommands := dockerCommands.value.flatMap {
   case cmd@Cmd("FROM", _) => List(cmd,
     Cmd("RUN", "apk update && apk add bash tzdata"),
     Cmd("ENV", "TZ \"Europe/Berlin\""),
-    Cmd("RUN", "echo \"${TZ}\" > /etc/timezone")
+    Cmd("RUN", "echo \"\${TZ}\" > /etc/timezone")
   )
   case other => List(other)
 }
