@@ -8,7 +8,7 @@ lazy val root = (project in file(".")).enablePlugins(PlayJava, JavaAppPackaging,
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
-scalaVersion := "2.12.1"
+scalaVersion := "2.12.2"
 
 resolvers ++= Seq(
   Resolver.mavenLocal,
@@ -17,8 +17,10 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  cache,
+  ehcache,
   javaWs,
+  guice,
+
   // WebJars pull in client-side web libraries,
   "org.webjars" % "bootstrap" % "3.3.7",
   "org.webjars" %% "webjars-play" % "2.6.1",

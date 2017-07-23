@@ -15,6 +15,13 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-mocha" % "1.1.0")
 addSbtPlugin("com.typesafe.sbt" % "sbt-twirl" % "1.3.3")
 addSbtPlugin("com.typesafe.sbt" % "sbt-gzip" % "1.0.0")
 
+
+addSbtPlugin("net.ground5hark.sbt" % "sbt-css-compress" % "0.1.4")
+addSbtPlugin("com.slidingautonomy.sbt" % "sbt-html-minifier" % "1.0.0")
+addSbtPlugin("org.danielnixon" % "sbt-uglify" % "1.0.7")
+
+addSbtPlugin("net.ground5hark.sbt" % "sbt-closure" % "0.1.3")
+
 // Play enhancer - this automatically generates getters/setters for public fields
 // and rewrites accessors of these fields to use the getters/setters. Remove this
 // plugin if you prefer not to have this feature, or disable on a per project

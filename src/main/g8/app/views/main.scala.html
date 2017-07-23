@@ -1,12 +1,14 @@
-@(title: String)(content: Html)(implicit webJarAssets: WebJarAssets)
+@(title: String)(content: Html)(implicit webJarsUtil: org.webjars.play.WebJarsUtil)
 
 <!DOCTYPE html>
 <html>
     <head>
         <title>@title</title>
         <link rel='shortcut icon' type='image/png' href='@routes.Assets.versioned("images/favicon.png")'>
-        <link rel='stylesheet' href='@routes.WebJarAssets.at(webJarAssets.locate("bootstrap.min.css"))'>
-        <script type='text/javascript' src='@routes.WebJarAssets.at(webJarAssets.locate("jquery.min.js"))'></script>
+
+        @Html(webJarsUtil.css("bootstrap.min.css"))
+
+        @Html(webJarsUtil.script("jquery.min.js"))
         <style>
         body {
         margin-top: 50px;
