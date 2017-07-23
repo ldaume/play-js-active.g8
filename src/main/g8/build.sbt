@@ -51,11 +51,19 @@ routesGenerator := InjectedRoutesGenerator
 
 unmanagedResourceDirectories in Test <+= baseDirectory(_ / "target/web/public/test")
 
+pipelineStages := Seq(uglify, cssCompress, digest, gzip)
+
 LessKeys.compress in Assets := true
 
-pipelineStages := Seq(digest, gzip)
+includeFilter in(Assets, LessKeys.less) := "*.less"
 
-includeFilter in (Assets, LessKeys.less) := "*.less"
+DigestKeys.algorithms += "sha1"
+
+excludeFilter in gzip := (excludeFilter in gzip).value || new SimpleFileFilter(file => new File(file.getAbsolutePath + ".gz").exists)
+
+includeFilter in closure := (includeFilter in closure).value && new SimpleFileFilter(f => f.getName.contains("play-stats"))
+
+includeFilter in cssCompress := (includeFilter in cssCompress).value && new SimpleFileFilter(f => f.getName.contains("play-stats"))
 
 initialize := {
   val _ = initialize.value
@@ -63,10 +71,11 @@ initialize := {
     sys.error("Java 8 is required for this project.")
 }
 
+TwirlKeys.constructorAnnotations += "@javax.inject.Inject()"
+
+
 dependencyUpdatesFailBuild := true
 dependencyUpdatesExclusions := moduleFilter(organization = "org.scala-lang") /*| moduleFilter(organization = "org.scala-lang", name = "twirl-api")*/
-
-TwirlKeys.constructorAnnotations += "@javax.inject.Inject()"
 
 
 // --------------------
@@ -75,9 +84,15 @@ TwirlKeys.constructorAnnotations += "@javax.inject.Inject()"
 // build with activator docker:publishLocal
 
 // change to smaller base image
-dockerBaseImage := "frolvlad/alpine-oraclejdk8:latest"
+dockerBaseImage := "frolvlad/alpine-oraclejdk8:slim"
+
+
 dockerCommands := dockerCommands.value.flatMap {
-  case cmd@Cmd("FROM", _) => List(cmd, Cmd("RUN", "apk update && apk add bash"))
+  case cmd@Cmd("FROM", _) => List(cmd,
+    Cmd("RUN", "apk update && apk add bash tzdata"),
+    Cmd("ENV", "TZ \"Europe/Berlin\""),
+    Cmd("RUN", "echo \"${TZ}\" > /etc/timezone")
+  )
   case other => List(other)
 }
 

@@ -2,17 +2,17 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET        /                            controllers.Application.index()
+GET        /                              controllers.Application.index()
 
-GET        /sync-foo                    controllers.Application.syncFoo()
-GET        /async-foo                   controllers.Application.asyncFoo()
-GET        /async-non-blocking-foo      controllers.Application.asyncNonBlockingFoo()
-GET        /reactive-request            controllers.Application.reactiveRequest()
-GET        /reactive-composition        controllers.Application.reactiveComposition()
+GET        /sync-foo                      controllers.Application.syncFoo()
+GET        /async-foo                     controllers.Application.asyncFoo()
+GET        /async-non-blocking-foo        controllers.Application.asyncNonBlockingFoo()
+GET        /reactive-request              controllers.Application.reactiveRequest()
+GET        /reactive-composition          controllers.Application.reactiveComposition()
 
 
 # Versioned Assets
-GET         /vassets/*file              controllers.Assets.versioned(path="/public", file: Asset)
+GET        /vassets/*file                 @controllers.Assets.versioned(path="/public", file: Asset)
 
 # WebJars
-GET         /webjars/*file              controllers.WebJarAssets.at(file)
+->         /webjars                       webjars.Routes
