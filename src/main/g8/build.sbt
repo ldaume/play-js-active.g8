@@ -8,7 +8,7 @@ lazy val root = (project in file(".")).enablePlugins(PlayJava, JavaAppPackaging,
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
-scalaVersion := "2.12.2"
+scalaVersion := "2.12.3"
 
 resolvers ++= Seq(
   Resolver.mavenLocal,
@@ -32,7 +32,7 @@ libraryDependencies ++= Seq(
   "org.webjars" % "react" % "15.6.1",
 
   // Commons
-  "software.reinvent" % "commons" % "0.3.3",
+  "software.reinvent" % "commons" % "0.3.4",
 
   // Json
   "com.jayway.jsonpath" % "json-path" % "2.4.0",
