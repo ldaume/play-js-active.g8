@@ -32,7 +32,7 @@ libraryDependencies ++= Seq(
   "org.webjars" % "react" % "15.6.1",
 
   // Commons
-  "software.reinvent" % "commons" % "0.3.4",
+  "software.reinvent" % "commons" % "0.3.5",
 
   // Json
   "com.jayway.jsonpath" % "json-path" % "2.4.0",
