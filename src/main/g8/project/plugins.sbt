@@ -17,7 +17,7 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.3.4")
 
 addSbtPlugin("net.ground5hark.sbt" % "sbt-css-compress" % "0.1.4")
 addSbtPlugin("com.slidingautonomy.sbt" % "sbt-html-minifier" % "1.0.0")
-addSbtPlugin("org.danielnixon" % "sbt-uglify" % "2.0.0")
+addSbtPlugin("com.typesafe.sbt" % "sbt-uglify" % "2.0.0")
 
 addSbtPlugin("net.ground5hark.sbt" % "sbt-closure" % "0.1.3")
 
