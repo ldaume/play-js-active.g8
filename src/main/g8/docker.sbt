@@ -9,7 +9,7 @@ dockerCommands := dockerCommands.value.flatMap {
   case cmd@Cmd("FROM", _) => List(cmd,
     Cmd("RUN", "apt-get update -y && apt-get install -y bash tzdata"),
     Cmd("ENV", "TZ \"Europe/Berlin\""),
-    Cmd("RUN", "echo \"${TZ}\" > /etc/timezone"),
+    Cmd("RUN", "echo \"\${TZ}\" > /etc/timezone"),
     Cmd("HEALTHCHECK", "--start-period=2m CMD curl --fail http://localhost:9000/api || exit" +
       " 1")
   )
