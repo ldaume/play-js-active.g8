@@ -12,4 +12,4 @@ excludeFilter in gzip := (excludeFilter in gzip).value || new SimpleFileFilter(f
 
 //includeFilter in closure := (includeFilter in closure).value && new SimpleFileFilter(f => f.getName.contains("play-stats"))
 
-includeFilter in cssCompress := (includeFilter in cssCompress).value && new SimpleFileFilter(f => f.getName.contains(appName))
+includeFilter in cssCompress := (includeFilter in cssCompress).value && new SimpleFileFilter(f => f.getName.contains(name))
