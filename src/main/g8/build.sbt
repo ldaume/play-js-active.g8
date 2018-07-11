@@ -4,8 +4,6 @@ version := "$version$"
 
 lazy val root = (project in file(".")).enablePlugins(PlayJava, JavaAppPackaging, DockerPlugin)
 
-javacOptions ++= Seq("-source", "1.9", "-target", "1.9")
-
 scalaVersion := "2.12.6"
 
 
@@ -16,8 +14,8 @@ routesGenerator := InjectedRoutesGenerator
 
 initialize := {
   val _ = initialize.value
-  if (sys.props("java.specification.version") != "9")
-    sys.error("Java 9 is required for this project. Found " + sys.props("java.specification.version"))
+  if (sys.props("java.specification.version") != "11")
+    sys.error("Java 11 is required for this project. Found " + sys.props("java.specification.version"))
 }
 
 TwirlKeys.constructorAnnotations += "@javax.inject.Inject()"
