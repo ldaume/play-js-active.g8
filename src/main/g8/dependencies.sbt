@@ -12,13 +12,16 @@ libraryDependencies ++= Seq(
   javaWs,
   guice,
 
+  // jdk 11 workaround
+  "javax.xml.bind" % "jaxb-api" % "2.3.0",
+
   // WebJars pull in client-side web libraries,
   "org.webjars" % "bootstrap" % "4.1.1",
   "org.webjars" % "bootstrap-notify" % "3.1.3",
   "org.webjars" %% "webjars-play" % "2.6.2",
   "org.webjars" % "jquery" % "3.3.1",
   "org.webjars" % "datatables" % "1.10.19",
-  "org.webjars" % "momentjs" % "2.22.1",
+  "org.webjars" % "momentjs" % "2.22.2",
   
   // Commons
   "software.reinvent" % "commons" % "0.3.12",
