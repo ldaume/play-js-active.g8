@@ -2,7 +2,7 @@ name := "$name$"
 
 version := "$version$"
 
-lazy val root = (project in file(".")).enablePlugins(PlayJava, JavaAppPackaging, DockerPlugin)
+lazy val root = (project in file(".")).enablePlugins(SbtWeb, PlayJava, JavaAppPackaging, DockerPlugin)
 
 scalaVersion := "2.12.6"
 
