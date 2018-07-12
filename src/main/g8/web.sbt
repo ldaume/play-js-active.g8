@@ -1,3 +1,6 @@
+import com.typesafe.sbt.web.SbtWeb.autoImport._
+import com.typesafe.sbt.less.Import.LessKeys
+
 unmanagedResourceDirectories in Test := Seq(baseDirectory.value / "target" / "web" / "public" / "test") //<+= baseDirectory(_ / "target/web/public/test")
 
 pipelineStages := Seq(uglify, cssCompress, digest, gzip)
