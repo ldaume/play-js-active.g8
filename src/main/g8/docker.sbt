@@ -1,5 +1,12 @@
+import java.io.File
+
 import com.typesafe.sbt.packager.docker._
 // build with sbt docker:publish[Local]
+
+
+import com.typesafe.config.ConfigFactory
+
+val conf = ConfigFactory.parseFile(new File("conf/application.conf")).resolve()
 
 // change to smaller base image
 dockerBaseImage := "ldaume/debian-slim-java:11-jre"
@@ -10,7 +17,7 @@ dockerCommands := dockerCommands.value.flatMap {
     Cmd("RUN", "apt-get update -y && apt-get install -y bash tzdata"),
     Cmd("ENV", "TZ \"Europe/Berlin\""),
     Cmd("RUN", "echo \"\${TZ}\" > /etc/timezone"),
-    Cmd("HEALTHCHECK", "--start-period=2m CMD curl --fail http://localhost:9000/api || exit" +
+    Cmd("HEALTHCHECK", "--start-period=2m CMD curl --fail http://localhost:" + conf.getString("http.port") + "/api || exit" +
       " 1")
   )
   case other => List(other)
