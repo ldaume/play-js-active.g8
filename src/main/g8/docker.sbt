@@ -17,7 +17,7 @@ dockerCommands := dockerCommands.value.flatMap {
     Cmd("RUN", "apt-get update -y && apt-get install -y bash tzdata"),
     Cmd("ENV", "TZ \"Europe/Berlin\""),
     Cmd("RUN", "echo \"\${TZ}\" > /etc/timezone"),
-    Cmd("HEALTHCHECK", "--start-period=2m CMD curl --fail http://localhost:" + conf.getString("http.port") + "/api || exit" +
+    Cmd("HEALTHCHECK", "--start-period=2m CMD curl --fail http://localhost:" + conf.getString("http.port") + "/heartbeat || exit" +
       " 1")
   )
   case other => List(other)
